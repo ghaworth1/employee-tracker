@@ -156,7 +156,7 @@ function addEmployee() {
     ])
     .then(function(answer) {
 
-      connection.query("INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)", [answer.eeFirstName, answer.eeLastName, answer.roleID, answer.managerID], function(err, res) {
+      connection.query("INSERT INTO employee (firstName, lastName, role_id, manager_id) VALUES (?, ?, ?, ?)", [answer.eeFirstName, answer.eeLastName, answer.roleID, answer.managerID], function(err, res) {
 
         if (err) throw err;
         console.table(res);
